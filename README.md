@@ -1,4 +1,5 @@
-# Guidance Title (required)
+# Guidance for Instance Expiration on AWS
+
 
 The Guidance title should be consistent with the title established first in Alchemy.
 
