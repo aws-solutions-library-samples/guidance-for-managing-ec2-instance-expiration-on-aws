@@ -1,0 +1,38 @@
+#
+# BEGIN: Semgrep's default .semgrepignore content, which must be replicated here or it will be dropped by defining
+# this file in the project (see: https://semgrep.dev/docs/ignoring-files-folders-code#understand-semgrep-defaults).
+#
+
+:include .gitignore
+
+# Common large paths
+node_modules/
+build/
+dist/
+vendor/
+.env/
+.venv/
+.tox/
+*.min.js
+.npm/
+.yarn/
+
+# Common test paths
+test/
+tests/
+*_test.go
+
+# Semgrep rules folder
+.semgrep
+
+# Semgrep-action log folder
+.semgrep_logs/
+
+#
+# BEGIN: Project specific files and folders to ignore.
+#
+
+# Must exclude cdk.json to avoid "Rule ID: detected-generic-secret" finding due to '@aws-cdk/aws-secretsmanager'
+# reference (because it contains the string 'secret'). Cannot use 'nosemgrep' in cdk.json because 'nosemgrep' must be
+# placed in a comment and there is no standard comment syntax for JSON files.
+cdk.json
