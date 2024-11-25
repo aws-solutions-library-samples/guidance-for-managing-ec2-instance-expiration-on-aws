@@ -62,8 +62,8 @@ Example event:
   "detail-type": "Action",
   "detail":
   {
-	"action": "STOP",
-	"instance-id": "i-1234567890abcdef0",
+    "action": "STOP",
+    "instance-id": "i-1234567890abcdef0",
   } 
 }
 ```
