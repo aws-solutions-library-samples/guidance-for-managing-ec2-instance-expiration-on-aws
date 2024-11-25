@@ -102,7 +102,7 @@ class Stack(Stack):
     # Lambda function
     ix_lambda = aws_lambda.Function(self, "Lambda",
       architecture = aws_lambda.Architecture.ARM_64,
-      runtime = aws_lambda.Runtime.PYTHON_3_12,
+      runtime = aws_lambda.Runtime.PYTHON_3_13,
       code = aws_lambda.Code.from_asset(os.path.join("lambda", "InstanceExpiration")),
       handler = "Lambda.handler",
       role = ix_lambda_role,
