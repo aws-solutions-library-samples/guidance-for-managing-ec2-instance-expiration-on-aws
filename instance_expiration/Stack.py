@@ -370,6 +370,20 @@ class Stack(Stack):
     #
 
     cdk_nag.NagSuppressions.add_resource_suppressions(
+      construct = ix_lambda,
+      suppressions = [
+        {
+          'id':
+            'AwsSolutions-L1',
+          'reason':
+            'Without this suppression, whenever AWS Lambda supports a new Python runtime anyone attempting to build '
+            'this project will encounter a fatal cdk-nag error until the project is updated. Need to prevent that '
+            'poor user experience without disabling cdk-nag altogether.'
+        },
+      ],
+    )
+
+    cdk_nag.NagSuppressions.add_resource_suppressions(
       construct = ix_lambda_role,
       apply_to_children = True,
       suppressions = [
