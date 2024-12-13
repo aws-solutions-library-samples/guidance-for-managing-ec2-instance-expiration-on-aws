@@ -127,6 +127,7 @@ class Stack(Stack):
     ix_dlq = aws_sqs.Queue(self, "DeadLetterQueue",
       fifo = True,                                      # Must be same type as primary queue
       enforce_ssl = True,
+      encryption = aws_sqs.QueueEncryption.SQS_MANAGED,
       content_based_deduplication = True,               # Required for FIFO queue
       retention_period = Duration.days(7)
     )
@@ -135,6 +136,7 @@ class Stack(Stack):
     ix_queue = aws_sqs.Queue(self, "Queue",
       fifo = True,                                      # FIFO required to use message group id for event serialization
       enforce_ssl = True,
+      encryption = aws_sqs.QueueEncryption.SQS_MANAGED,
       visibility_timeout = ix_lambda.timeout,
       content_based_deduplication = True,               # Required for FIFO queue
       dead_letter_queue = aws_sqs.DeadLetterQueue(
