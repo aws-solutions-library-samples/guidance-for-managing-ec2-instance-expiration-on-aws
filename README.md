@@ -1,4 +1,4 @@
-# Guidance for Instance Expiration on AWS
+# Guidance for EC2 Instance Expiration on AWS
 
 ## Table of Contents
 
@@ -62,7 +62,7 @@ Experience with the AWS CDK is **not** required.
 
 ### Prerequisite: AWS Cloud Development Kit
 
-Python and the AWS CDK are required to build the guidance. Choose one of the following paths.
+Python and the AWS CDK are required to build the guidance. Choose one of the following paths:
 
 #### 1) Use the AWS CloudShell
 
@@ -361,7 +361,7 @@ Console:
 This section describes the design of the guidance for interested parties, which is not necessary to deploy (see
 [DEPLOYMENT](#deployment)) or use (see [USAGE](#usage)) the guidance.
 
-### Diagram
+### Reference Architecture
 
 [<img src="doc/instance-expiration-design.png">](instance-expiration-design.png)
 
