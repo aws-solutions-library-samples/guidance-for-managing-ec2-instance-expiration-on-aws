@@ -1,4 +1,4 @@
-# Guidance for EC2 Instance Expiration on AWS
+# Guidance for Managing EC2 Instance Expiration on AWS
 
 ## Table of Contents
 
