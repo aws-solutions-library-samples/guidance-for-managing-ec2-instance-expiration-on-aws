@@ -59,7 +59,7 @@ class Stack(Stack):
   def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
 
     super().__init__(scope, construct_id, **kwargs)
-
+    self.template_options.description = "Guidance for Managinig EC2 instance expiration on AWS (SO9588)"
     IX_SQS_MESSAGE_ID = "InstanceExpiration"
     IX_SSM_PARAM_NEXT_SCHEDULE_ARN = '/' + self.stack_name + '/NextScheduleArn'
 
